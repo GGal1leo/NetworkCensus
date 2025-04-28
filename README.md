@@ -46,7 +46,7 @@ IP: 192.168.1.100 | MAC: aa:bb:cc:dd:ee:ff | Vendor: Unknown
 5. Vendor Lookup - API call to macvendors.com
 
 ### Performance
-- Scans /24 subnet (~250 IPs) in ~30 seconds
+- Scans /24 subnet (~250 IPs) in ~30 seconds (8-15 sec if you increase the worker number to 60)
 - Thread-safe design prevents network flooding
 
 ## Contributing 🤝

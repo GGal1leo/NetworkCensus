@@ -5,7 +5,15 @@ import re
 import json
 import requests
 from concurrent.futures import ThreadPoolExecutor
+#from datetime import datetime 
+import argparse
 
+def parse_args():
+    parser = argparse.ArgumentParser(description="Network Scanner")
+    parser.add_argument("-t", "--workers", type=int, default=4, help="Number of threads to use for scanning")
+    return parser.parse_args()
+
+args = parse_args()
 
 # Helper functions to convert IP to integer and vice versa
 def ip_to_int(ip):
@@ -92,8 +100,11 @@ if ip and subnet is not None:
     # Uncomment to print all IPs (could be lengthy)
     #print("Available IPs: ", available_ips)
     # Multithreaded arping with 4 workers
-    with ThreadPoolExecutor(max_workers=4) as executor:
+#    now = datetime.now()
+    with ThreadPoolExecutor(max_workers=args.workers) as executor:
         executor.map(probe_ip, available_ips)
+#    end = datetime.now()
+#    print(f"Scan completed in {end - now}")
 else:
     print("Could not retrieve IP or subnet information.")
 
