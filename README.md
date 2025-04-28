@@ -3,7 +3,7 @@
 A Python-based network device discovery tool that uses ARP probing to identify active devices, even when ICMP (ping) is blocked. Retrieves MAC addresses, hardware vendors, and supports multithreaded scanning.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-GPL%20v3.0-red)
 
 ## Features✨
 - **ARP-based scanning** - Bypasses ICMP restrictions
