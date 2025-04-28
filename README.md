@@ -65,7 +65,7 @@ Options:
 > Table: Recommended worker thread configurations and their performance characteristics
 
 
-### Performance
+### Performance 🏎️
 - Scans /24 subnet (~250 IPs) in ~30 seconds (8-15 sec if you increase the worker number to 60)
 - Thread-safe design prevents network flooding
 
